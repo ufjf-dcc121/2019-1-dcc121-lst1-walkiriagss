@@ -9,8 +9,26 @@
     <div id = "y">5</div>
     <div id = "produto"></div>
     <div id = "soma"></div>
+    <p>O produto de <span id = "x">7</span> e <span id = "y">5</span> é <span id ="produto">35</span>!</p>
     <script>
+        var x = 7;
+        var y = 5;
+        var produto = x*y; 
+        var soma = x+y;
+
+        var eX = document.getElementById("x");
+        var eY = document.getElementById("y");
+        var eProduto = document.getElementById("produto");
+        var eSoma = document.getElementById("soma");
+
+        eX.textContent = x;
+        eY.textContent = y;
+        eProduto = produto;
+        eSoma = soma;
+
         
+
+
     </script>
 </body>
 </html>
