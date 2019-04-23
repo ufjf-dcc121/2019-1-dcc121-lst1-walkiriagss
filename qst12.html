@@ -5,14 +5,13 @@
     <title>Questão 12</title>
 </head>
 <body>
-    <div id = "x">7</div>
-    <div id = "y">5</div>
-    <div id = "produto"></div>
+    <p>O produto de <div id = "x">7</div> e <div id = "y">5</div> é <div id = "produto"></div>
     <div id = "soma"></div>
-    <p>O produto de <span id = "x">7</span> e <span id = "y">5</span> é <span id ="produto">35</span>!</p>
+    <p>O produto de <div id = "x">7</div> e <div id = "y">5</div> é <div id ="produto"></div>!</p>
+    <p>A soma de <span id = "x">7</span> e <span id = "y">5</span> é <span id ="soma">12</span>!</p>
     <script>
-        var x = 7;
-        var y = 5;
+        var x = 13;
+        var y = 8;
         var produto = x*y; 
         var soma = x+y;
 
@@ -23,8 +22,8 @@
 
         eX.textContent = x;
         eY.textContent = y;
-        eProduto = produto;
-        eSoma = soma;
+        eProduto.textContent = produto;
+        eSoma.textContent = soma;
 
         
 

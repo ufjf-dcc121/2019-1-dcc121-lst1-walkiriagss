@@ -2,23 +2,20 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Questão 10</title>
 </head>
 <body>
     <p id = "nome">Walkiria</p>
     <p id = "sobrenome">Garcia</p>
-    <h1 id = "nomecompleto"> Bem vinda <span id = "nome" >Walkiria</span> <span id = "sobrenome">Garcia</span>!</h1>
+    <h1 id = "nomecompleto"></h1>
     
     <script>
-        var nome = "Walkiria" ; 
-        var sobrenome = "Garcia";
-        var nomeCompleto = nome + sobrenome;
-
-        var eNome = document.getElementById("nome");
-        var eSobrenome = document.getElementById("sobrenome");
-        var eNomeCompleto = document.getElementById("nomecompleto");
-
-       
+        var nome = document.getElementById("nome"); 
+        var sobrenome = document.getElementById("sobrenome");
+        var nomeCompleto = document.getElementById("nomecompleto");
+        nomeCompleto.innerText="Bem vinda" +nome.textContent+" "+sobrenome.textContent+".";
+        
+        
     </script>
 </body>
 </html>
