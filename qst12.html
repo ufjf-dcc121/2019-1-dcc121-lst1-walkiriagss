@@ -5,28 +5,21 @@
     <title>Questão 12</title>
 </head>
 <body>
-    <p>O produto de <div id = "x">7</div> e <div id = "y">5</div> é <div id = "produto"></div>
+    <div id = "x">7</div> 
+    <div id = "y">5</div> 
+    <div id = "produto"></div>
     <div id = "soma"></div>
-    <p>O produto de <div id = "x">7</div> e <div id = "y">5</div> é <div id ="produto"></div>!</p>
-    <p>A soma de <span id = "x">7</span> e <span id = "y">5</span> é <span id ="soma">12</span>!</p>
+    
     <script>
-        var x = 13;
-        var y = 8;
-        var produto = x*y; 
-        var soma = x+y;
+        var x = document.getElementById("x");
+        var y = document.getElementById("y");
+        var produto = document.getElementById("produto"); 
+        var soma = document.getElementById("soma");
 
-        var eX = document.getElementById("x");
-        var eY = document.getElementById("y");
-        var eProduto = document.getElementById("produto");
-        var eSoma = document.getElementById("soma");
+        produto.innerText ="O produto de " +x.textContent+ " e " +y.textContent+ " é " +x.textContent*y.textContent;
+        soma.innerText = "A soma de " +x.textContent+ " e " +y.textContent+ " é " +x.textContent+y.textContent;
 
-        eX.textContent = x;
-        eY.textContent = y;
-        eProduto.textContent = produto;
-        eSoma.textContent = soma;
-
-        
-
+    
 
     </script>
 </body>
