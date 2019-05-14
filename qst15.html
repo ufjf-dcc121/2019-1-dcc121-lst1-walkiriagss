@@ -2,7 +2,7 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Questão 15</title>
 </head>
 <body>
     <main>
@@ -11,11 +11,12 @@
                 <p>Olá <span id="aluno">Fulano</span>, você está matriculado há <span id="tempo">2</span> 
                 anos no curso de Confeitaria e as notas das suas disciplinas são: <span id="nota1">70</span> 
                 em Confeitaria Básica; <span id="nota2">80</span> em Coberturas e <span id="nota3">60</span> em Broas e Bolos.</p>
-                <p><span id="resultado"></span></p>
-                <button id="Avaliar">Avaliar</button>
+                <button id="avaliar">Avaliar</button>
                 <button id="limpar">Limpar</button>
+                <p><span id="resultado"></span></p>
                 <p><span id="memorias"></span></p>
                 <p><span id="media"></span></p>
+                
         </section>
     </main>
     <script>
@@ -35,7 +36,7 @@
         var eConfeitaria = document.getElementById("nota1");
         var eCoberturas = document.getElementById("nota2");
         var eBolos = document.getElementById("nota3");
-        var eBotao = document.getElementById("Avaliar");
+        var eBotao = document.getElementById("avaliar");
         var eBotao2 = document.getElementById("limpar");
         var eResultado = document.getElementById("resultado");
         var eMelhorias = document.getElementById("melhorias");
@@ -54,17 +55,22 @@
             melhorias = " ";
         }
 
-        eBotao2.addEventListener("click", avaliarClick);
+        eBotao.addEventListener("click", avaliarClick);
 
         function avaliarClick(){
+            coberturas = Number(eCoberturas.textContent)
+            confeitaria = Number(eConfeitaria.textContent);
+            bolos = Number(eBolos.textContent);
+            media = (confeitaria + coberturas + bolos) / 3;
+            eMedia.textContent = media;
+            
             if(media > 70){
-                resultado = "Parabéns Fulano! Você está aprovado com média 70!";
+                eResultado.textContent = resultado = "Parabéns Fulano! Você está aprovado com " ;
             }
             else{
-                resultado = "Você está reprovado com média 50!”;
-    
+                resultado = "Você está reprovado com média 50!";
             }
-            
+            ;
  
         }
 
