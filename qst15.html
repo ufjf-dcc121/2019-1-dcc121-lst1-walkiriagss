@@ -8,12 +8,45 @@
     <main>
         <section>
             <h1>Resultado de Avaliação</h1>
-                <p>Olá <span id="nome">Fulano</span>, você está matriculado há <span id="tempo">2</span> anos no curso de Confeitaria e as notas das suas disciplinas são: <span id="nota1">70</span> em Confeitaria Básica; <span id="nota2">80</span> em Coberturas e <span id="nota3">60</span> em Broas e Bolos.</p>
+                <p>Olá <span id="aluno">Fulano</span>, você está matriculado há <span id="tempo">2</span> 
+                anos no curso de Confeitaria e as notas das suas disciplinas são: <span id="nota1">70</span> 
+                em Confeitaria Básica; <span id="nota2">80</span> em Coberturas e <span id="nota3">60</span> em Broas e Bolos.</p>
                 <p><span id="resultado"></span></p>
                 <button id="Avaliar">Avaliar</button>
                 <button id="limpar">Limpar</button>
                 <p><span id="memorias"></span></p>
+                <p><span id="media"></span></p>
         </section>
     </main>
+    <script>
+        var nome;
+        var anos;
+        var confeitaria;
+        var coberturas;
+        var bolos;
+        var botaoAvaliar;
+        var botaoLimpar;
+        var resultado;
+        var melhorias;
+        var media;
+
+        var eNome = document.getElementById("aluno");
+        var eAnos = document.getElementById("tempo");
+        var eConfeitaria = document.getElementById("nota1");
+        var eCoberturas = document.getElementById("nota2");
+        var eBolos = document.getElementById("nota3");
+        var eBotao = document.getElementById("Avaliar");
+        var eBotao2 = document.getElementById("limpar");
+        var eResultado = document.getElementById("resultado");
+        var eMelhorias = document.getElementById("melhorias");
+        var eMedia = document.getElementById("media");
+
+        eNome.contentEditable = true;
+        eAnos.contentEditable = true;
+        eConfeitaria.contentEditable = true;
+        eCoberturas.contentEditable = true;
+        eBolos.contentEditable = true;
+
+    </script>
 </body>
 </html>
