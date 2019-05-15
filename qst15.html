@@ -14,23 +14,26 @@
                 <button id="avaliar">Avaliar</button>
                 <button id="limpar">Limpar</button>
                 <p><span id="resultado"></span></p>
-                <p><span id="memorias"></span></p>
+                <p><span id="melhorias"></span></p>
                 <p><span id="media"></span></p>
                 
         </section>
     </main>
     <script>
+        //0 modele seu problema (defina variáveis para trabalho)
         var nome;
         var anos;
         var confeitaria;
         var coberturas;
         var bolos;
-        var botaoAvaliar;
-        var botaoLimpar;
         var resultado;
-        var melhorias;
+        var melhorias="";
         var media;
 
+
+        //1 Capture os elementos de interesse (entrada e saída)
+        // var botaoAvaliar;
+        // var botaoLimpar;
         var eNome = document.getElementById("aluno");
         var eAnos = document.getElementById("tempo");
         var eConfeitaria = document.getElementById("nota1");
@@ -48,29 +51,53 @@
         eCoberturas.contentEditable = true;
         eBolos.contentEditable = true;
 
+        //2 - registre os eventos nas funções de trabalho 
         eBotao2.addEventListener("click", limparClick);
-
-        function limparClick(){
-            resultado = " ";
-            melhorias = " ";
-        }
-
         eBotao.addEventListener("click", avaliarClick);
 
+        //3 - faça as funções que realizam trabalho
+        function limparClick(){
+            resultado = "";
+            melhorias = "";
+
+            eMedia.innerHTML = media;
+            eResultado.innerHTML = resultado;
+        }
+
+
         function avaliarClick(){
+            //3.1 Pegue os dados de entrada e jogue nas variáveis do modelo
+            melhorias ='';
             coberturas = Number(eCoberturas.textContent)
             confeitaria = Number(eConfeitaria.textContent);
             bolos = Number(eBolos.textContent);
+            //3.2 faça os cálculos e operações
+        
             media = (confeitaria + coberturas + bolos) / 3;
-            eMedia.textContent = media;
+
             
-            if(media > 70){
-                eResultado.textContent = resultado = "Parabéns Fulano! Você está aprovado com " ;
+            
+            if(media >= 70){
+                resultado = "Parabéns Fulano! Você está aprovado com média " +media;
             }
+            
             else{
-                resultado = "Você está reprovado com média 50!";
+                resultado = "Você está reprovado com média" +media;
             }
-            ;
+            if(coberturas < 60){
+                melhorias += "Fulano, considere estudar mais Coberturas!";
+            }
+            if(confeitaria < 60){
+                melhorias += "Fulano, considere estudar mais confeitaria!";
+            }
+            if(bolos < 60){
+                melhorias += "Fulano, considere estudar mais bolo!";
+            }
+            
+            //3.4 Escreva os dados calculados nos elementos de saída
+            eMedia.innerHTML = media;
+            eResultado.innerHTML = resultado;
+            eMelhorias.innerHTML = melhorias;
  
         }
 
