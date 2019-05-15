@@ -59,9 +59,11 @@
         function limparClick(){
             resultado = "";
             melhorias = "";
+            media = "";
 
             eMedia.innerHTML = media;
             eResultado.innerHTML = resultado;
+            eMelhorias.innerHTML = melhorias;
         }
 
 
@@ -71,6 +73,7 @@
             coberturas = Number(eCoberturas.textContent)
             confeitaria = Number(eConfeitaria.textContent);
             bolos = Number(eBolos.textContent);
+            nome = (eNome.textContent);
             //3.2 faça os cálculos e operações
         
             media = (confeitaria + coberturas + bolos) / 3;
@@ -78,24 +81,26 @@
             
             
             if(media >= 70){
-                resultado = "Parabéns Fulano! Você está aprovado com média " +media;
+                resultado = "Parabéns "+nome+"! Você está aprovado com média "+media;
+                
             }
             
             else{
-                resultado = "Você está reprovado com média" +media;
+                resultado = "Você está reprovado com média "+ media;
+                
             }
             if(coberturas < 60){
-                melhorias += "Fulano, considere estudar mais Coberturas!";
+                melhorias += nome+ ", considere estudar mais Coberturas! ";
             }
             if(confeitaria < 60){
-                melhorias += "Fulano, considere estudar mais confeitaria!";
+                melhorias += nome+", considere estudar mais confeitaria! ";
             }
             if(bolos < 60){
-                melhorias += "Fulano, considere estudar mais bolo!";
+                melhorias += nome+", considere estudar mais bolo! ";
             }
             
             //3.4 Escreva os dados calculados nos elementos de saída
-            eMedia.innerHTML = media;
+            ;
             eResultado.innerHTML = resultado;
             eMelhorias.innerHTML = melhorias;
  
